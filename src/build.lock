@@ -3,10 +3,10 @@
 # Manual changes might be lost - proceed with caution!
 
 OpenCorePkg:
-  version: 0.9.2
-  url: https://github.com/dortania/build-repo/releases/download/OpenCorePkg-0c7caae/OpenCore-0.9.2-DEBUG.zip
-  resolution: '@acidanthera/OpenCorePkg@github:0.9.2#0c7caae'
-  checksum: 423b1837991efa8e47530a726e57e735252ea489c5af34ad38074dc7860db4f9
+  version: 0.9.3
+  url: https://github.com/dortania/build-repo/releases/download/OpenCorePkg-cbd60f6/OpenCore-0.9.3-DEBUG.zip
+  resolution: '@acidanthera/OpenCorePkg@github:0.9.3#cbd60f6'
+  checksum: fa2361363dfeb20795316b525d46b39cea0c0ef929bfe9a375a096873ab82c88
   extract: ./X64/EFI/.
   type: directory
   dependencies:
@@ -18,24 +18,24 @@ OpenCorePkg:
         - ./Resources/.
       type: binary
 Lilu:
-  version: 1.6.5
-  url: https://github.com/dortania/build-repo/releases/download/Lilu-f07e333/Lilu-1.6.5-DEBUG.zip
-  resolution: '@acidanthera/Lilu@github:1.6.5#f07e333'
-  checksum: 2f89a6669f9eaf44a5b030a2b970a6c76175303fec8cbf0f4ce0a3e552e2c126
+  version: 1.6.6
+  url: https://github.com/dortania/build-repo/releases/download/Lilu-f2addba/Lilu-1.6.6-DEBUG.zip
+  resolution: '@acidanthera/Lilu@github:1.6.6#f2addba'
+  checksum: b21416c5d5f1fce305dbc35f2c91182396bd0dde171611f5119fcacb91e8c013
   extract: ./Lilu.kext
   type: kext
 WhateverGreen:
   version: 1.6.5
-  url: https://github.com/dortania/build-repo/releases/download/WhateverGreen-d839cea/WhateverGreen-1.6.5-DEBUG.zip
-  resolution: '@acidanthera/WhateverGreen@github:1.6.5#d839cea'
-  checksum: 91cebbf2ec5f23bb727edb2b4c548bf97e344b54845ae7955cc506815683a9f2
+  url: https://github.com/dortania/build-repo/releases/download/WhateverGreen-5ee88cd/WhateverGreen-1.6.5-DEBUG.zip
+  resolution: '@acidanthera/WhateverGreen@github:1.6.5#5ee88cd'
+  checksum: 9cb49875fbd3679b8d266458f506647ec4918d18c036145d2fbb83e0e2eab804
   extract: ./WhateverGreen.kext
   type: kext
 AppleALC:
-  version: 1.8.2
-  url: https://github.com/dortania/build-repo/releases/download/AppleALC-1882105/AppleALC-1.8.2-DEBUG.zip
-  resolution: '@acidanthera/AppleALC@github:1.8.2#1882105'
-  checksum: e4326dd6eb8bcef64e51da74bb036641ae0cd130b6b72507fa71cb35fbac3350
+  version: 1.8.3
+  url: https://github.com/dortania/build-repo/releases/download/AppleALC-5329ac7/AppleALC-1.8.3-DEBUG.zip
+  resolution: '@acidanthera/AppleALC@github:1.8.3#5329ac7'
+  checksum: 6cff0c0b448cf0f1a801b5614c13703d443e448ef23868f31ca0616e5e67f04b
   extract: ./AppleALC.kext
   type: kext
 VirtualSMC:
@@ -91,10 +91,10 @@ AirportItlwm-Catalina:
   extract: ./Catalina/AirportItlwm.kext
   type: kext
 BlueToolFixup:
-  version: 2.6.6
-  url: https://github.com/dortania/build-repo/releases/download/BrcmPatchRAM-7e14a5a/BrcmPatchRAM-2.6.6-DEBUG.zip
-  resolution: '@acidanthera/BrcmPatchRAM@github:2.6.6#7e14a5a'
-  checksum: de38918a628d581c7cdc6002147771dcad56d34850bfcb575a27067440ce1644
+  version: 2.6.7
+  url: https://github.com/dortania/build-repo/releases/download/BrcmPatchRAM-1e3c9c1/BrcmPatchRAM-2.6.7-DEBUG.zip
+  resolution: '@acidanthera/BrcmPatchRAM@github:2.6.7#1e3c9c1'
+  checksum: f1b55d24514408beeacfbc37280094474e1bc8b4856b0b713e44d7912f53a88b
   extract: ./BlueToolFixup.kext
   type: kext
 IntelBluetoothFirmware:
@@ -117,6 +117,13 @@ CpuTscSync:
   resolution: '@acidanthera/CpuTscSync@github:1.1.0#d74fcb8'
   checksum: d916f19f824b19177c7b72c088c1baf91c2c87fb00224652a0261d1cc0152c28
   extract: ./CpuTscSync.kext
+  type: kext
+CPUFriend:
+  version: 1.2.7
+  url: https://github.com/dortania/build-repo/releases/download/CPUFriend-5738ef7/CPUFriend-1.2.7-DEBUG.zip
+  resolution: '@acidanthera/CPUFriend@github:1.2.7#5738ef7'
+  checksum: fd432dc320f912e60399be6eb65e5140cccf6a25c2b41be380ce4a95aa101042
+  extract: ./CPUFriend.kext
   type: kext
 DiskArbitrationFixup:
   version: 1.0.0
@@ -168,18 +175,25 @@ RealtekCardReaderFriend:
   extract: ./RealtekCardReaderFriend.kext
   type: kext
 RestrictEvents:
-  version: 1.1.1
-  url: https://github.com/dortania/build-repo/releases/download/RestrictEvents-495f4d5/RestrictEvents-1.1.1-DEBUG.zip
-  resolution: '@acidanthera/RestrictEvents@github:1.1.1#495f4d5'
-  checksum: cc21e26eda2902bcac137d93431c057bebff01898dccd78a4ce99a7c127cec31
+  version: 1.1.2
+  url: https://github.com/dortania/build-repo/releases/download/RestrictEvents-5c54dcd/RestrictEvents-1.1.2-DEBUG.zip
+  resolution: '@acidanthera/RestrictEvents@github:1.1.2#5c54dcd'
+  checksum: 69c4f73a87dfa8e354a3eb1afaee99fbb8dace88391e081fe6919d88734bc367
   extract: ./RestrictEvents.kext
   type: kext
-USBToolBox:
-  version: 1.1.1
-  url: https://github.com/USBToolBox/kext/releases/download/1.1.1/USBToolBox-1.1.1-DEBUG.zip
-  resolution: '@USBToolbox/kext@github:1.1.1#release'
-  checksum: 5c545703d90e0cf288148a39787e3302d1d1c246981fa53d39d449d81b4536bd
-  extract: ./USBToolBox.kext
+ThunderboltReset:
+  version: "1.0"
+  url: https://github.com/osy/ThunderboltReset/releases/download/v1.0/ThunderboltReset.kext.zip
+  resolution: '@osy/ThunderboltReset@github:1.0#release'
+  checksum: bebf15a604c949f915a3d6cf427c16e67c5b471ff39bc1bc8ff109ce29f06a91
+  extract: ./ThunderboltReset.kext
+  type: kext
+IOElectrify:
+  version: 0.0.1
+  url: https://github.com/the-darkvoid/macOS-IOElectrify/releases/download/v0.0.1/darkvoid-IOElectrify-2017-1112.zip
+  resolution: '@the-darkvoid/macOS-IOElectrify@github:0.0.1#release'
+  checksum: ddd99d8226e754441127d1a446c60c64a8e6d4dd68d7926b8f0000bfb553c5e7
+  extract: ./Debug/IOElectrify.kext
   type: kext
 VoodooI2C:
   version: "2.8"

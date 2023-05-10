@@ -1,5 +1,5 @@
 ## @file
-# config.plist configuration file for the UX481FA/UX481FL
+# config.plist configuration file for the UX581GV/UX581LV
 #
 # Copyright (c) 2023, Cory Bennett. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause
@@ -70,16 +70,6 @@ ACPI:
       Count:                          Number  | 1
       Find:                           Data    | <5F435253>
       Replace:                        Data    | <58435253>
-    - Base:                           String  | "_SB.PCI0.I2C0.TPL1"
-      Comment:                        String  | "[GPI0] Primary Display - Rename _CRS to XCRS"
-      Count:                          Number  | 1
-      Find:                           Data    | <5F435253>
-      Replace:                        Data    | <58435253>
-    - Base:                           String  | "_SB.PCI0.I2C3.TPL0"
-      Comment:                        String  | "[GPI0] Screenpad Plus - Rename _CRS to XCRS"
-      Count:                          Number  | 1
-      Find:                           Data    | <5F435253>
-      Replace:                        Data    | <58435253>
     # Companion to src/ACPI/SSDT-GPRW.dsl -> EFI/OC/ACPI/SSDT-GPRW.aml
     - Comment:                        String  | "[GPRW] Instant Wake fix - Rename GPRW to XPRW"
       Find:                           Data    | <47505257 02>
@@ -90,6 +80,11 @@ ACPI:
       Count:                          Number  | 1
       Find:                           Data    | <49414E45>
       Replace:                        Data    | <58414E45>
+    # Companion to src/ACPI/SSDT-PTS.dsl -> EFI/OC/ACPI/SSDT-PTS.aml
+    - Comment:                        String  | "[PTS] Rename _PTS to ZPTS"
+      Find:                           Data    | <5F505453>
+      Replace:                        Data    | <5A505453>
+      # TableSignature:                 Data    | <44534454>
     # Companion to src/ACPI/SSDT-XWAK.dsl -> EFI/OC/ACPI/SSDT-XWAK.aml
     - Comment:                        String  | "[XWAK] Rename _WAK to XWAK"
       Find:                           Data    | <5F57414B>
@@ -131,10 +126,14 @@ Booter:
     # - Addresses macOS conflict with CR0 MRS register.
     # - https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#kernel-panic-on-invalid-frame-pointer
     # - Note: The below options reflect support for MATs (2018+ firmware).
+    #         For the UX581GV (9th gen) model, use the values commented below.
     EnableWriteUnprotector:           Boolean | false
+    # EnableWriteUnprotector:           Boolean | true
     ProtectUefiServices:              Boolean | true
     RebuildAppleMemoryMap:            Boolean | true
+    # RebuildAppleMemoryMap:            Boolean | false
     SyncRuntimePermissions:           Boolean | true
+    # SyncRuntimePermissions:           Boolean | false
 
 # Sets hibernation behavior defaults.
 # - This leverages functionality from the HibernationFixup kext.
@@ -169,7 +168,7 @@ UEFI:
     MinVersion:                       Number  | 1412101001000000
   Output:
     # Sets proper display scaling for boot picker + debug logging.
-    UIScale:                          Number  | 1
+    UIScale:                          Number  | 2
 
 # Prevent SSD scan timeouts that may stall booting.
 Kernel:
@@ -186,34 +185,46 @@ NVRAM:
   Add:
     4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102:
       revcpu:                         Number  | 1
-      revcpuname:                     String  | "Intel Core i7-10510U CPU @ 1.80GHz"
-      # revcpuname:                     String  | "Intel Core i5-10210U CPU @ 1.60GHz"
+      revcpuname:                     String  | "Intel Core i9-10980HK CPU @ 2.40GHz"
+      # revcpuname:                     String  | "Intel Core i7-10870H CPU @ 2.20GHz"
+      # revcpuname:                     String  | "Intel Core i9-9980HK CPU @ 2.40GHz"
+      # revcpuname:                     String  | "Intel Core i7-9750H CPU @ 2.60GHz"
 PlatformInfo:
   Generic:
-    ProcessorType:                    Number  | 1537
+    ProcessorType:                    Number  | 3841
 
-# UHD 620 iGPU patches
+# UHD 630 iGPU patches
 DeviceProperties:
   Add:
     PciRoot(0x0)/Pci(0x2,0x0):
-      AAPL,ig-platform-id:            Data    | <00009B3E>
+      AAPL,ig-platform-id:            Data    | <0900A53E>
       AAPL,slot-name:                 String  | "Internal@0,2,0"
-      model:                          String  | "Intel UHD Graphics 620"
-      # Spoof as UHD 630 integrated graphics.
-      device-id:                      Data    | <9B3E0000>
-      # Misc. Comet-Lake backlight fixes.
+      model:                          String  | "Intel UHD Graphics 630"
+      # Misc. Coffee-Lake + Comet-Lake backlight fixes.
       enable-backlight-registers-fix: Boolean | true
       enable-backlight-smoother:      Boolean | true
+      force-online:                   Boolean | true
+      # 4K display fixes
+      dpcd-max-link-rate:             Data    | <14000000>
+      enable-dpcd-max-link-rate-fix:  Boolean | true
+      enable-max-pixel-clock-override: Boolean | true
+      # HDMI 2.0 fixes
+      enable-hdmi20:                  Boolean | true
+      enable-lspcon-support:          Boolean | true
+      disable-hdmi-patches:           Boolean | true
       # Framebuffer connector patches.
       # - con0 [eDP]   Primary Display
       framebuffer-con0-alldata:       Data    | <00000800 02000000 98000000>
       framebuffer-con0-enable:        Data    | <01000000>
-      # - con1 [DP]    ScreenPad-Plus
-      framebuffer-con1-alldata:       Data    | <01010900 00040000 C7030000>
+      # - con1 [DP]    Screenpad Plus
+      framebuffer-con1-alldata:       Data    | <01050900 00040000 87010000>
       framebuffer-con1-enable:        Data    | <01000000>
-      # - con2 [HDMI]  HDMI 1.4 port
-      framebuffer-con2-alldata:       Data    | <02020A00 00080000 C7030000>
+      # - con2 [DP]    USB-C port
+      framebuffer-con2-alldata:       Data    | <02060900 00080000 87010000>
       framebuffer-con2-enable:        Data    | <01000000>
+      # - con3 [HDMI]  HDMI 2.0 port
+      framebuffer-con3-alldata:       Data    | <03040A00 00080000 87010000>
+      framebuffer-con3-enable:        Data    | <01000000>
       framebuffer-patch-enable:       Data    | <01000000>
 
 ################################################################################
@@ -228,10 +239,11 @@ DeviceProperties:
       AAPL,slot-name:                 String  | "Internal@0,31,3"
       device_type:                    String  | "Audio device"
       model:                          String  | "Comet Lake PCH cAVS"
+      # model:                          String  | "Coffee Lake PCH cAVS"
       # Specifies AppleALC layout 15 for Realtek ALC294 controller.
       # - Possible layouts: 11, 12, 13, 15, 21, 22, 28, 44, 66, 99
       # - https://github.com/acidanthera/AppleALC/tree/master/Resources/ALC294/Info.plist
-      layout-id:                      Data    | <15000000> 
+      layout-id:                      Data    | <15000000>
 
 # Configure Boot chime (optional and also cosmetic)
 # - https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html#setting-up-boot-chime-with-audiodxe
@@ -250,13 +262,13 @@ UEFI:
 #                           Platform (SMBIOS) fixes                            #
 ################################################################################
 
-# Spoof device SMBIOS as MacBookPro16,3 or A2289 (EMC 3456) model.
+# Spoof device SMBIOS as MacBookPro16,4 or A2141 (EMC 3347) model.
 # - Affects CPU power management in macOS (XCPM).
 # - Affects iGPU display outputs in macOS (AGDP).
 # - https://dortania.github.io/OpenCore-Install-Guide/extras/smbios-support.html
 PlatformInfo:
   Generic:
-    SystemProductName:                String  | "MacBookPro16,3"
+    SystemProductName:                String  | "MacBookPro16,4"
 
 # Prevents SMBIOS injection into non-Apple operating systems.
 Kernel:
@@ -294,9 +306,9 @@ Misc:
     # - Possible values include:
     #   - Disabled: No model, Secure Boot will be disabled.
     #   - Default: Currently set to x86legacy
-    #   - j223: Secure Boot policy for MacBookPro16,3
+    #   - j215: Secure Boot policy for MacBookPro16,4
     # - https://dortania.github.io/OpenCore-Post-Install/universal/security/applesecureboot.html#securebootmodel
-    SecureBootModel:                  String  | "j223"
+    SecureBootModel:                  String  | "j215"
     # OpenCore vaulting configuration (optional=no vault enforced, insecure)
     # - https://dortania.github.io/OpenCore-Post-Install/universal/security/vault.html
     Vault:                            String  | "Optional"
@@ -312,6 +324,17 @@ NVRAM:
       csr-active-config:              Data    | <00000000>
 
 ################################################################################
+
+'@ifdef': RELEASE
+
+NVRAM:
+  Add:
+    7C436110-AB2A-4BBB-A880-FE41995C9F82:
+      # Breakdown of used boot args:
+      # `agdpmod=vit9696` (disables board-id AGDP check)
+      boot-args:                      String  | "agdpmod=vit9696"
+
+'@endif':
 
 '@ifdef': DEBUG
 
@@ -336,6 +359,7 @@ NVRAM:
       # `debug=0x100`     (debug mask; disables watchdog to avoid panic reboot)
       # `keepsyms=1`      (show panic log debug symbols)
       # `msgbuf=1048576`  (Resizes kernel msg buffer to 1 MB; avoids truncation)
-      boot-args:                      String  | "-v debug=0x100 keepsyms=1 msgbuf=1048576"
+      # `agdpmod=vit9696` (disables board-id AGDP check)
+      boot-args:                      String  | "-v debug=0x100 keepsyms=1 msgbuf=1048576 agdpmod=vit9696"
 
 '@endif':

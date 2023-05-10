@@ -10,14 +10,18 @@ include:
     SSDT-ATKD: "ACPI/SSDT-ATKD.dsl"
     SSDT-AWAK: "ACPI/SSDT-AWAC.dsl"
     SSDT-DGPU: "ACPI/SSDT-DGPU.dsl"
+    SSDT-DTGP: "ACPI/SSDT-DTGP.dsl"
     SSDT-EC-USBX: "ACPI/SSDT-EC-USBX.dsl"
     SSDT-GPIO: "ACPI/SSDT-GPIO.dsl"
     SSDT-GPRW: "ACPI/SSDT-GPRW.dsl"
     SSDT-KBLC: "ACPI/SSDT-KBLC.dsl"
     SSDT-PLUG: "ACPI/SSDT-PLUG.dsl"
     SSDT-PNLF: "ACPI/SSDT-PNLF.dsl"
+    SSDT-PTS: "ACPI/SSDT-PTS.dsl"
+    SSDT-RHUB: "ACPI/SSDT-RHUB.dsl"
     SSDT-SBUS-MCHC: "ACPI/SSDT-SBUS-MCHC.dsl"
     SSDT-SPLC: "ACPI/SSDT-SPLC.dsl"
+    SSDT-TB3: "ACPI/SSDT-TB3.dsl"
     SSDT-XWAK: "ACPI/SSDT-XWAK.dsl"
   drivers:
   - AudioDxe
@@ -25,8 +29,6 @@ include:
   - OpenCanopy
   - OpenRuntime
   - ResetNvramEntry
-  # Required for booting from built-in microSD reader
-  - Rts5227S
   kexts:
     Lilu: latest
     WhateverGreen: latest
@@ -64,6 +66,8 @@ include:
     IntelBTPatcher: "*"
     # Misc. Lilu plugins
     CpuTscSync: latest
+    CPUFriend: latest
+    CPUFriendDataProvider: "./Kexts/CPUFriendDataProvider.kext"
     DiskArbitrationFixup: Qonfused/DiskArbitrationFixup=latest
     ECEnabler: latest
     FeatureUnlock: latest
@@ -72,9 +76,10 @@ include:
     RealtekCardReader: 0xFireWolf/RealtekCardReader=latest
     RealtekCardReaderFriend: 0xFireWolf/RealtekCardReaderFriend=latest
     RestrictEvents: latest
+    ThunderboltReset: osy/ThunderboltReset=latest
     # Misc. non-Lilu kexts
-    USBToolBox: USBToolbox/kext=latest
-    UTBMap: "./Kexts/UTBMap.kext"
+    IOElectrify: the-darkvoid/macOS-IOElectrify=latest
+    USBMap: "./Kexts/USBMap.kext"
     # Voodoo kexts + plugins
     VoodooI2C/VoodooI2CServices: "*"
     VoodooI2C/VoodooGPIO: "*"
