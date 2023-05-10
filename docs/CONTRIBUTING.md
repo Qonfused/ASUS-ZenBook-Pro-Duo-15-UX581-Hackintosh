@@ -4,7 +4,7 @@ Welcome! Thank you for your interest in contributing to this project. There are 
 
 This document describes this project's development process. Following these guidelines shows that you respect the time and effort of those managing this project. In return, you will be shown respect in addressing your issue, reviewing your changes, and incorporating your contributions.
 
-> **Note** Please, don't use the issue tracker for support questions. Instead use: [Github Discussions](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/discussions).
+> **Note** Please, don't use the issue tracker for support questions. Instead use: [Github Discussions](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/discussions).
 
 **Table of Contents:**
 
@@ -33,7 +33,7 @@ This document describes this project's development process. Following these guid
 
 ## Questions
 
-If you have a question or need help, please open a [new discussion](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/discussions/new).
+If you have a question or need help, please open a [new discussion](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/discussions/new).
 
 ## Feature Requests
 
@@ -45,7 +45,7 @@ Small Changes can directly be crafted and submitted to the GitHub Repository as 
 
 ## Reporting Bugs
 
-> **Note** If you find a security vulnerability, do NOT open an issue. Please refer to our [Security Policy](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/security/policy) for reporting security vulnerabilities.**
+> **Note** If you find a security vulnerability, do NOT open an issue. Please refer to our [Security Policy](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/security/policy) for reporting security vulnerabilities.**
 
 Before you submit your issue, please [search the issue archive][0] - maybe your question or issue has already been identified or addressed.
 
@@ -196,4 +196,4 @@ git push -f
 
 Note that this will overwrite the old branch on the server, so make sure you are happy with your changes first!
 
-[0]: https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/issues
+[0]: https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/issues

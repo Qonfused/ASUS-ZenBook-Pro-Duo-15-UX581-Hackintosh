@@ -1,23 +1,23 @@
-<h1 align="center">ASUS ZenBook Duo 14 UX481 Hackintosh</h1>
+<h1 align="center">ASUS ZenBook Pro Duo 15 UX581 Hackintosh</h1>
 <br>
 <p align="center">
   <img
-      src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/main/docs/assets/README/UX481.png"
-      alt="UX481FL"
+      src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/UX581.png"
+      alt="UX581"
       class="center"
       width=500px
     >
   <br>
-  A <b>Hackintosh</b> project for the <b>ASUS ZenBook Duo 14"</b> built on top of the <a href="https://github.com/acidanthera/OpenCorePkg">OpenCore</a> bootloader and <a href="https://github.com/Qonfused/OCE-Build">OCE-Build</a> build manager.
+  A <b>Hackintosh</b> project for the <b>ASUS ZenBook Pro Duo 15"</b> built on top of the <a href="https://github.com/acidanthera/OpenCorePkg">OpenCore</a> bootloader and <a href="https://github.com/Qonfused/OCE-Build">OCE-Build</a> build manager.
 </p>
 
 <div align="center">
 
   <a href="/LICENSE">![License](https://img.shields.io/badge/⚖_License-BSD_3_Clause-lightblue?labelColor=3f4551)</a>
-  <a href="/docs/CHANGELOG.md">![SemVer](https://img.shields.io/badge/SemVer-v0.5.3-important?logo=SemVer&labelColor=3f4551)</a>
-  <a href="">![Supported Models](https://img.shields.io/badge/Supported%20Models-UX481FA%20%7C%20UX481FL-important?labelColor=3f4551)</a>
-  <a href="https://github.com/acidanthera/OpenCorePkg/releases">![OpenCore](https://img.shields.io/badge/dynamic/yaml?label=OpenCore&logo=Osano&logoColor=0298e1&labelColor=3f4451&prefix=v&query=OpenCorePkg.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FQonfused%2FASUS-ZenBook-Duo-14-UX481-Hackintosh%2Fmain%2Fsrc%2Fbuild.lock)</a>
-  <a href="https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/actions/workflows/oce-build.yml">![OCE Build](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/actions/workflows/oce-build.yml/badge.svg?branch=main)</a>
+  <a href="/docs/CHANGELOG.md">![SemVer](https://img.shields.io/badge/SemVer-v0.0.0-important?logo=SemVer&labelColor=3f4551)</a>
+  <a href="">![Supported Models](https://img.shields.io/badge/Supported%20Models-UX581GV%20%7C%20UX581LV-important?labelColor=3f4551)</a>
+  <a href="https://github.com/acidanthera/OpenCorePkg/releases">![OpenCore](https://img.shields.io/badge/dynamic/yaml?label=OpenCore&logo=Osano&logoColor=0298e1&labelColor=3f4451&prefix=v&query=OpenCorePkg.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FQonfused%2FASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh%2Fmain%2Fsrc%2Fbuild.lock)</a>
+  <a href="https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/actions/workflows/oce-build.yml">![OCE Build](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/actions/workflows/oce-build.yml/badge.svg?branch=main)</a>
 
 </div>
 
@@ -39,10 +39,10 @@
 
 > **Note** This repository is still a work in progress.
 >
-> See this repository's [task board](https://github.com/users/Qonfused/projects/2/views/4) and [issues page](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/issues) for current progress.
+> See this repository's [task board](https://github.com/users/Qonfused/projects/3) and [issues page](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/issues) for current progress.
 > Upcoming or planned changes are also tracked on a [roadmap board](https://github.com/users/Qonfused/projects/2/views/9).
 >
-> Refer to the [CHANGELOG](/docs/CHANGELOG.md) or [SemVer board](https://github.com/users/Qonfused/projects/2/views/11) for changes implemented per release version.
+> Refer to the [CHANGELOG](/docs/CHANGELOG.md) or [SemVer board](https://github.com/users/Qonfused/projects/3) for changes implemented per release version.
 
 ### macOS Version Support:
 <table>
@@ -59,7 +59,7 @@
     <tr>
       <td>
         <img
-          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/main/docs/assets/README/ventura.png"
+          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/ventura.png"
           width=25
           hspace=2
           align="top"
@@ -75,7 +75,7 @@
     <tr>
       <td>
         <img
-          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/main/docs/assets/README/monterey.png"
+          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/monterey.png"
           width=22
           hspace=2
           align="top"
@@ -91,7 +91,7 @@
     <tr>
       <td>
         <img
-          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/main/docs/assets/README/bigsur.png"
+          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/bigsur.png"
           width=25
           hspace=2
           align="top"
@@ -107,7 +107,7 @@
     <tr>
       <td>
         <img
-          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/main/docs/assets/README/catalina.png"
+          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/catalina.png"
           width=25
           hspace=2
           align="top"
@@ -134,38 +134,43 @@
   <tbody>
   <!-- Processor -->
     <tr>
-      <td>CPU</td>
-      <td>• Intel Core i7-10510U<br>• Intel Core i5-10210U</td>
+      <td rowspan=2>CPU</td>
+      <td>• Intel Core i9-10980HK<br>• Intel Core i7-10750H</td>
       <td style="text-align: center;">✅</td>
       <td>Natively supported (since macOS Catalina).</td>
+    </tr>
+    <tr>
+      <td>• Intel Core i9-9980HK<br>• Intel Core i7-9750H</td>
+      <td style="text-align: center;">✅</td>
+      <td>Natively supported.</td>
     </tr>
   <!-- Graphics -->
     <tr>
       <td rowspan=2>Graphics</td>
-      <td>Intel UHD Graphics 620</td>
+      <td>Intel UHD Graphics 630</td>
       <td style="text-align: center;">✅</td>
       <td>Full acceleration (with DRM).</td>
     </tr>
     <tr>
-      <td>Nvidia GeForce MX250 2GB</td>
+      <td>Nvidia GeForce RTX 2060 6GB</td>
       <td style="text-align: center;">❌</td>
       <td>Disabled; no macOS support.</td>
     </tr>
   <!-- Displays -->
     <tr>
       <td rowspan=2>Displays</td>
-      <td>14" Primary Display<br>(IPS, 1920x1080 @ 60 Hz)</td>
+      <td>15.6" Primary Display<br>(OLED, 3840x2160 @ 60 Hz)</td>
       <td style="text-align: center;">✅</td>
-      <td>Fully supported (with backlight control).</td>
+      <td>Mostly supported (no backlight control).</td>
     </tr>
     <tr>
-      <td>12.6" Screenpad Plus Display<br>(IPS, 1920x515 @ 60 Hz)</td>
+      <td>14" Screenpad Plus Display<br>(IPS, 3840x1100 @ 60 Hz)</td>
       <td style="text-align: center;">🚧</td>
       <td>Work in progress (with backlight control).</td>
     </tr>
   <!-- Interfaces -->
     <tr>
-      <td rowspan=6>Interfaces</td>
+      <td rowspan=5>Interfaces</td>
       <td>Built-in Keyboard</td>
       <td style="text-align: center;">✅</td>
       <td>Fully supported (with media keys and backlight control).</td>
@@ -174,11 +179,6 @@
       <td>Built-in Trackpad</td>
       <td style="text-align: center;">✅</td>
       <td>Fully supported (GPIO pinned with multi-touch gestures)</td>
-    </tr>
-    <tr>
-      <td>(Physical) Trackpad Buttons</td>
-      <td style="text-align: center;">🚧</td>
-      <td>Work in progress (VoodooI2C issue; incorrect button map).</td>
     </tr>
     <tr>
       <td rowspan=2>Touchscreen<br>(Primary Display)<br>(Screenpad Plus Display)</td>
@@ -215,7 +215,7 @@
   <!-- Wi-Fi + Bluetooth -->
     <tr>
       <td>Wi-Fi</td>
-      <td rowspan=2>Intel AX201<br>(Wi-Fi 6 + Bluetooth 5.0)</td>
+      <td rowspan=2>Intel AX200<br>(Wi-Fi 6 + Bluetooth 5.0)</td>
       <td rowspan=2 style="text-align: center;">✅</td>
       <td rowspan=2>Fully supported (with limited Continuity support).</td>
     </tr>
@@ -225,14 +225,14 @@
   <!-- Storage -->
     <tr>
       <td>Storage</td>
-      <td>Intel 660p NVMe SSD</td>
-      <td style="text-align: center;">✅</td>
-      <td>Fully supported (with power management).</td>
+      <td>Samsung PM981 NVMe SSD</td>
+      <td style="text-align: center;">❌</td>
+      <td>Not supported (requires SSD replacement).</td>
     </tr>
   <!-- Ports -->
     <tr>
       <td>Ports</td>
-      <td>(Left)<br>• 1x 4.5mm DC-in (19V, 3.42A)<br>• 1x HDMI 1.4<br>• 1x USB 3.1 Gen 2 Type-A<br>• 1x USB 3.1 Gen 2 Type-C<br>(Right)<br>• 1x USB 3.1 Gen 1 Type-A<br>• 1x 3.5 mm Audio combo jack<br>• 1x MicroSD card reader</td>
+      <td>(Left)<br>• 1x 4.5mm DC-in (19V, 3.42A)<br>• 1x HDMI 1.4<br>• 1x USB 3.1 Gen 2 Type-A<br>(Right)<br>• 1x USB 3.1 Gen 2 Type-A<br>• 1x 3.5 mm Audio combo jack<br>• 1x Thunderbolt 3 Type-C</td>
       <td style="text-align: center;">✅</td>
       <td>Fully supported.</td>
     </tr>
@@ -325,8 +325,8 @@
 
 To clone this repository locally with submodules, run the below commands:
 ```sh
-git clone --recurse-submodules https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh
-cd ASUS-ZenBook-Duo-14-UX481-Hackintosh
+git clone --recurse-submodules https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh
+cd ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh
 ```
 
 If you've cloned this project without resolving submodules, you'll need to initialize them:
@@ -372,7 +372,7 @@ bash scripts/validate-efi.sh
 ```
 
 ### 3. Using this EFI with macOS
-Refer to the [Install Guide](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/wiki/Install-Guide) and [Post-Install Guide](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX481-Hackintosh/wiki/Post-Install-Guide) for installation instructions.
+Refer to the [Install Guide](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/wiki/Install-Guide) and [Post-Install Guide](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/wiki/Post-Install-Guide) for installation instructions.
 
 > **Note** To enable **iServices** functionality, please refer to the notice in
 > the build-generated **.serialdata** file under the **src/** directory for instructions on validating your
@@ -382,7 +382,7 @@ Refer to the [Install Guide](https://github.com/Qonfused/ASUS-ZenBook-Duo-14-UX4
 > ```yaml
 > MLB:                String | "M0000000000000001"
 > ROM:                Data   | <112233445566>
-> SystemProductName:  String | "MacBookPro16,3"
+> SystemProductName:  String | "MacBookPro16,4"
 > SystemSerialNumber: String | "W00000000001"
 > SystemUUID:         String | "00000000-0000-0000-0000-000000000000"
 > ```
