@@ -118,13 +118,6 @@ CpuTscSync:
   checksum: d916f19f824b19177c7b72c088c1baf91c2c87fb00224652a0261d1cc0152c28
   extract: ./CpuTscSync.kext
   type: kext
-CPUFriend:
-  version: 1.2.7
-  url: https://github.com/dortania/build-repo/releases/download/CPUFriend-5738ef7/CPUFriend-1.2.7-DEBUG.zip
-  resolution: '@acidanthera/CPUFriend@github:1.2.7#5738ef7'
-  checksum: fd432dc320f912e60399be6eb65e5140cccf6a25c2b41be380ce4a95aa101042
-  extract: ./CPUFriend.kext
-  type: kext
 DiskArbitrationFixup:
   version: 1.0.0
   url: https://github.com/Qonfused/DiskArbitrationFixup/releases/download/1.0.0/DiskArbitrationFixup-1.0.0-DevBuild-02272020_225112.zip

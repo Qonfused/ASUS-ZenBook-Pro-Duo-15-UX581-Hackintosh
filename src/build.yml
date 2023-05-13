@@ -66,8 +66,9 @@ include:
     IntelBTPatcher: "*"
     # Misc. Lilu plugins
     CpuTscSync: latest
-    CPUFriend: latest
-    CPUFriendDataProvider: "./Kexts/CPUFriendDataProvider.kext"
+    # FIXME: Override frequency vectors only for CPUs with unsupported XCPM.
+    # CPUFriend: latest
+    # CPUFriendDataProvider: "./Kexts/CPUFriendDataProvider.kext"
     DiskArbitrationFixup: Qonfused/DiskArbitrationFixup=latest
     ECEnabler: latest
     FeatureUnlock: latest
