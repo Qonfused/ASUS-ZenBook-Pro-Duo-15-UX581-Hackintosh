@@ -361,13 +361,15 @@ git submodule update
 
 To build this project's EFI, run the below command at the root of the project:
 ```sh
-# Run build pipeline for the UX481FA/FL EFI
+# Run build pipeline for the UX581GV EFI
+bash scripts/build.sh --UX581GV
+# Run build pipeline for the UX581LV EFI
 bash scripts/build.sh
 ```
 
 You can run a validation script to check the EFI build output with:
 ```sh
-# Verify build output for the UX481FA/FL EFI
+# Verify build output for the UX581GV/LV EFI
 bash scripts/validate-efi.sh
 ```
 

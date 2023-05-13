@@ -12,14 +12,15 @@ __PWD__=$(pwd); cd "$(realpath "$(dirname "${BASH_SOURCE[0]}")/../../")"
 source ./scripts/lib/constants.sh
 source ./scripts/lib/oce-build/lib/macros.sh
 
-
-while read -r BUILD; do
-  # Set build type in config to target build version
-  REPLACE="$(sed "s/oce-build: [A-Z]*/oce-build: $BUILD/" src/build.yml)"
-  echo "$REPLACE" > src/build.yml
-  # Run build script
-  echo "Building \"EFI-$TAG-$BUILD.zip\"..."
-  bash scripts/lib/oce-build/build.sh -c "$CONFIG"
-  # Compress EFI directory
-  (cd dist && zip -r -X "../EFI-$TAG-$BUILD.zip" EFI >/dev/null)
-done <<< $'RELEASE\nDEBUG'
+while read -r TARGET; do
+  while read -r BUILD; do
+    # Set build type in config to target build version
+    REPLACE="$(sed "s/oce-build: [A-Z]*/oce-build: $BUILD/" src/build.yml)"
+    echo "$REPLACE" > src/build.yml
+    # Run build script
+    echo "Building \"EFI-$TAG-$BUILD.zip\"..."
+    bash scripts/lib/oce-build/build.sh -c "$CONFIG" "--$TARGET"
+    # Compress EFI directory
+    (cd dist && zip -r -X "../EFI-$TAG-$TARGET-$BUILD.zip" EFI >/dev/null)
+  done <<< $'RELEASE\nDEBUG'
+done <<< $'UX581GV\nUX581LV'

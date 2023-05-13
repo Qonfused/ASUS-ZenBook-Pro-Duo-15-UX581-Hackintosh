@@ -1,0 +1,20 @@
+## @file
+# config.plist configuration file patches for the UX581GV
+#
+# Copyright (c) 2023, Cory Bennett. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+##
+
+################################################################################
+#                           BIOS/firmware related fixes                        #
+################################################################################
+
+Booter:
+  Quirks:
+    # Prevents kernel panic on `Invalid frame pointer`.
+    # - Addresses macOS conflict with CR0 MRS register.
+    # - https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/extended/kernel-issues.html#kernel-panic-on-invalid-frame-pointer
+    # - Note: The below options reflect no MATs support (<2018 firmware).
+    EnableWriteUnprotector:           Boolean | true
+    RebuildAppleMemoryMap:            Boolean | false
+    SyncRuntimePermissions:           Boolean | false

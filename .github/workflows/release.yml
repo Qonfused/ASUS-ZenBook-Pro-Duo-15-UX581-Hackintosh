@@ -64,5 +64,7 @@ jobs:
           tag_name: ${{ env.TAG }}
           body_path: ${{ github.workspace }}-RELEASE_NOTES.txt
           files: |
-            EFI-${{ env.TAG }}-RELEASE.zip
-            EFI-${{ env.TAG }}-DEBUG.zip
+            EFI-${{ env.TAG }}-UX581GV-RELEASE.zip
+            EFI-${{ env.TAG }}-UX581GV-DEBUG.zip
+            EFI-${{ env.TAG }}-UX581LV-RELEASE.zip
+            EFI-${{ env.TAG }}-UX581LV-DEBUG.zip
