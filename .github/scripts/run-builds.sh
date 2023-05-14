@@ -18,7 +18,7 @@ while read -r TARGET; do
     REPLACE="$(sed "s/oce-build: [A-Z]*/oce-build: $BUILD/" src/build.yml)"
     echo "$REPLACE" > src/build.yml
     # Run build script
-    echo "Building \"EFI-$TAG-$BUILD.zip\"..."
+    echo "Building \"EFI-$TAG-$TARGET-$BUILD.zip\"..."
     bash scripts/lib/oce-build/build.sh -c "$CONFIG" "--$TARGET"
     # Compress EFI directory
     (cd dist && zip -r -X "../EFI-$TAG-$TARGET-$BUILD.zip" EFI >/dev/null)
