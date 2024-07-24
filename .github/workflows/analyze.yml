@@ -7,7 +7,6 @@ on:
     paths:
       - '!.github/**'
       - '!docs/**'
-      - '!.gitmodules'
       - '!.gitattributes'
       - '!.gitignore'
       - 'scripts/**'
@@ -29,15 +28,10 @@ jobs:
       #
       # The default behavior of @actions/checkout outputs many noisy lines of
       # status output in the workflow log, which is problematic for log size.
-      #
-      # Refer to the below PR for updates on this issue:
-      # - https://github.com/actions/checkout/pull/1067
       - name: Checkout latest repository commit
-        # uses: actions/checkout@v3
-        uses: simonbaird/checkout@no-progress-option
+        uses: actions/checkout@v4
         with:
           show-progress: false
-          submodules: recursive
       # Installs shellcheck dependency.
       - name: Install Shellcheck dependencies
         shell: bash
@@ -47,4 +41,5 @@ jobs:
           sudo cp "shellcheck-${scversion}/shellcheck" /usr/bin/
       # Run shellcheck on each .tool/.command/.sh file with info verbosity.
       - name: Run shellcheck
-        run: find . \( -name "*.sh" -o -name "*.command" \) -exec sh -c 'for TargetFile; do shellcheck --severity=info "${TargetFile}" || exit 1; done' sh {} +
+        shell: sh
+        run: bash .github/scripts/shellcheck.sh
