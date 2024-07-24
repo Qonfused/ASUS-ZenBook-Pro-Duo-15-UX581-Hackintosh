@@ -3,46 +3,46 @@
 # Manual changes might be lost - proceed with caution!
 
 OpenCorePkg:
-  version: 0.9.3
-  url: https://github.com/dortania/build-repo/releases/download/OpenCorePkg-cbd60f6/OpenCore-0.9.3-DEBUG.zip
-  resolution: '@acidanthera/OpenCorePkg@github:0.9.3#cbd60f6'
-  checksum: fa2361363dfeb20795316b525d46b39cea0c0ef929bfe9a375a096873ab82c88
+  version: 1.0.1
+  url: https://github.com/dortania/build-repo/releases/download/OpenCorePkg-7e39fed/OpenCore-1.0.1-DEBUG.zip
+  resolution: '@acidanthera/OpenCorePkg@github:1.0.1#7e39fed'
+  checksum: bd0d2b52033f810ff08ebe3a6edd99f1d73cfad8a4109b34c4d9f22fdbdd8ca0
   extract: ./X64/EFI/.
   type: directory
   dependencies:
     OcBinaryData:
-      resolution: '@acidanthera/OcBinaryData@github:#c2a98980'
+      resolution: '@acidanthera/OcBinaryData@github:#af09b0bf'
       url: https://github.com/acidanthera/OcBinaryData/
       extract:
         - ./Drivers/.
         - ./Resources/.
       type: binary
 Lilu:
-  version: 1.6.6
-  url: https://github.com/dortania/build-repo/releases/download/Lilu-f2addba/Lilu-1.6.6-DEBUG.zip
-  resolution: '@acidanthera/Lilu@github:1.6.6#f2addba'
-  checksum: b21416c5d5f1fce305dbc35f2c91182396bd0dde171611f5119fcacb91e8c013
+  version: 1.6.8
+  url: https://github.com/dortania/build-repo/releases/download/Lilu-4256f43/Lilu-1.6.8-DEBUG.zip
+  resolution: '@acidanthera/Lilu@github:1.6.8#4256f43'
+  checksum: 313a9b178e9f8726e12a59e6418f6cecf14933ed6c8eb49ab7f2e01487093a05
   extract: ./Lilu.kext
   type: kext
 WhateverGreen:
-  version: 1.6.5
-  url: https://github.com/dortania/build-repo/releases/download/WhateverGreen-5ee88cd/WhateverGreen-1.6.5-DEBUG.zip
-  resolution: '@acidanthera/WhateverGreen@github:1.6.5#5ee88cd'
-  checksum: 9cb49875fbd3679b8d266458f506647ec4918d18c036145d2fbb83e0e2eab804
+  version: 1.6.7
+  url: https://github.com/dortania/build-repo/releases/download/WhateverGreen-d87a4c4/WhateverGreen-1.6.7-DEBUG.zip
+  resolution: '@acidanthera/WhateverGreen@github:1.6.7#d87a4c4'
+  checksum: add2b938c910ad28b6e7ec38ea2b9511bacb9e624c80cb3ec0d55c71019cbe49
   extract: ./WhateverGreen.kext
   type: kext
 AppleALC:
-  version: 1.8.3
-  url: https://github.com/dortania/build-repo/releases/download/AppleALC-5329ac7/AppleALC-1.8.3-DEBUG.zip
-  resolution: '@acidanthera/AppleALC@github:1.8.3#5329ac7'
-  checksum: 6cff0c0b448cf0f1a801b5614c13703d443e448ef23868f31ca0616e5e67f04b
+  version: 1.9.1
+  url: https://github.com/dortania/build-repo/releases/download/AppleALC-9abbb02/AppleALC-1.9.1-DEBUG.zip
+  resolution: '@acidanthera/AppleALC@github:1.9.1#9abbb02'
+  checksum: e296088562cf9e706b3338398c541de30b126869f842acbe4e9eaf65b11929b2
   extract: ./AppleALC.kext
   type: kext
 VirtualSMC:
-  version: 1.3.2
-  url: https://github.com/dortania/build-repo/releases/download/VirtualSMC-28c7d1d/VirtualSMC-1.3.2-DEBUG.zip
-  resolution: '@acidanthera/VirtualSMC@github:1.3.2#28c7d1d'
-  checksum: 5319975b6f2c4548c0e546e0271ec9a00f474029bf8e411adda0f235b3c06e01
+  version: 1.3.3
+  url: https://github.com/dortania/build-repo/releases/download/VirtualSMC-038200e/VirtualSMC-1.3.3-DEBUG.zip
+  resolution: '@acidanthera/VirtualSMC@github:1.3.3#038200e'
+  checksum: 9071b707bc731c115b1981eb6fe181f827ea278a48ad3673217ec8aac58a2943
   extract: ./Kexts/VirtualSMC.kext
   type: kext
   bundled:
@@ -62,46 +62,60 @@ AsusSMC:
   checksum: a6e10e428c9ce0ca5cf5618083a2db86d8cf809d2185ce9775522496a8956872
   extract: ./AsusSMC.kext
   type: kext
+AirportItlwm-Sonoma-14.4:
+  version: 2.3.0
+  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Sonoma14.4.kext.zip
+  resolution: '@OpenIntelWireless/itlwm@github:2.3.0#release'
+  checksum: 7ef12a8037eb9bc795828c348f4fa0728b8ade57aa0984b037816ef91c2d5119
+  extract: ./AirportItlwm.kext
+  type: kext
+AirportItlwm-Sonoma-14.0:
+  version: 2.3.0
+  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Sonoma14.0.kext.zip
+  resolution: '@OpenIntelWireless/itlwm@github:2.3.0#release'
+  checksum: d795fc5844e9126f4327c4be5ceae9297ebf8a0977377a28c4a24346643609bb
+  extract: ./AirportItlwm.kext
+  type: kext
 AirportItlwm-Ventura:
-  version: 2.2.0
-  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.2.0-alpha/AirportItlwm-Ventura-v2.2.0-DEBUG-alpha-ddd2768.zip
-  resolution: '@OpenIntelWireless/itlwm@github:2.2.0#release'
-  checksum: ae6bdd14ba15918ee71fcb7a78819d84ab7775a7b924a97972d29c2e64aecaa9
-  extract: ./Ventura/AirportItlwm.kext
+  version: 2.3.0
+  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Ventura.kext.zip
+  resolution: '@OpenIntelWireless/itlwm@github:2.3.0#release'
+  checksum: 7ea19307ef9ae08991d911e6f1de59e682444e21dbcd6342b5e0a037f19c860e
+  extract: ./AirportItlwm.kext
   type: kext
 AirportItlwm-Monterey:
-  version: 2.2.0
-  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.2.0-alpha/AirportItlwm-Monterey-v2.2.0-DEBUG-alpha-ddd2768.zip
-  resolution: '@OpenIntelWireless/itlwm@github:2.2.0#release'
-  checksum: 815487da1b4b47004b81363b7584afbf1439b0e030188b272a1fcff0f0fe35ea
-  extract: ./Monterey/AirportItlwm.kext
+  version: 2.3.0
+  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Monterey.kext.zip
+  resolution: '@OpenIntelWireless/itlwm@github:2.3.0#release'
+  checksum: da4a7468bb92fbe873513e0cd0d037d367f65051339d73b726d4c40b6167f923
+  extract: ./AirportItlwm.kext
   type: kext
 AirportItlwm-BigSur:
-  version: 2.2.0
-  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.2.0-alpha/itlwm-v2.2.0-DEBUG-alpha-ddd2768.zip
-  resolution: '@OpenIntelWireless/itlwm@github:2.2.0#release'
-  checksum: b70d5f29b526042dd14e0dfafc93a3c011b209cdf4bf60a37e53e62ac7746c02
-  extract: ./itlwm.kext
+  version: 2.3.0
+  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_BigSur.kext.zip
+  resolution: '@OpenIntelWireless/itlwm@github:2.3.0#release'
+  checksum: 0d89fe4f515023a81cea16bbc3540d2ceb2d0dc312cc6f1050038e47fea31fdc
+  extract: ./AirportItlwm.kext
   type: kext
 AirportItlwm-Catalina:
-  version: 2.2.0
-  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.2.0-alpha/AirportItlwm-Catalina-v2.2.0-DEBUG-alpha-ddd2768.zip
-  resolution: '@OpenIntelWireless/itlwm@github:2.2.0#release'
-  checksum: d4a7b2be9707f5976875aa47ce71785f48541e95906aced2d2521c3180e29c37
-  extract: ./Catalina/AirportItlwm.kext
+  version: 2.3.0
+  url: https://github.com/OpenIntelWireless/itlwm/releases/download/v2.3.0/AirportItlwm_v2.3.0_stable_Catalina.kext.zip
+  resolution: '@OpenIntelWireless/itlwm@github:2.3.0#release'
+  checksum: 68ce60fa7c1f625ba3d07e8ad1b36798e6fffe076f7d0cd021db39b09367d7fb
+  extract: ./AirportItlwm.kext
   type: kext
 BlueToolFixup:
-  version: 2.6.7
-  url: https://github.com/dortania/build-repo/releases/download/BrcmPatchRAM-1e3c9c1/BrcmPatchRAM-2.6.7-DEBUG.zip
-  resolution: '@acidanthera/BrcmPatchRAM@github:2.6.7#1e3c9c1'
-  checksum: f1b55d24514408beeacfbc37280094474e1bc8b4856b0b713e44d7912f53a88b
+  version: 2.6.9
+  url: https://github.com/dortania/build-repo/releases/download/BrcmPatchRAM-d7e3f23/BrcmPatchRAM-2.6.9-DEBUG.zip
+  resolution: '@acidanthera/BrcmPatchRAM@github:2.6.9#d7e3f23'
+  checksum: d609eb96173ca953a0cd73f93a665641fe96a0d2c05b81f8235a1cf70a13a44a
   extract: ./BlueToolFixup.kext
   type: kext
 IntelBluetoothFirmware:
-  version: 2.2.0
-  url: https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/v2.2.0/IntelBluetooth-v2.2.0.zip
-  resolution: '@OpenIntelWireless/IntelBluetoothFirmware@github:2.2.0#release'
-  checksum: 07614b4c6de71785e4c1703093aa0978a311d162978b47d44a5e893182945967
+  version: 2.4.0
+  url: https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases/download/v2.4.0/IntelBluetooth-v2.4.0.zip
+  resolution: '@OpenIntelWireless/IntelBluetoothFirmware@github:2.4.0#release'
+  checksum: 78418daa11f620012fc53ba68cbd643c2642a45f2f96c594fd01aaf2bc68fe2b
   extract: ./IntelBluetoothFirmware.kext
   type: kext
   bundled:
@@ -112,10 +126,10 @@ IntelBluetoothFirmware:
       extract: ./IntelBTPatcher.kext
       type: kext
 CpuTscSync:
-  version: 1.1.0
-  url: https://github.com/dortania/build-repo/releases/download/CpuTscSync-d74fcb8/CpuTscSync-1.1.0-DEBUG.zip
-  resolution: '@acidanthera/CpuTscSync@github:1.1.0#d74fcb8'
-  checksum: d916f19f824b19177c7b72c088c1baf91c2c87fb00224652a0261d1cc0152c28
+  version: 1.1.1
+  url: https://github.com/dortania/build-repo/releases/download/CpuTscSync-bc32031/CpuTscSync-1.1.1-DEBUG.zip
+  resolution: '@acidanthera/CpuTscSync@github:1.1.1#bc32031'
+  checksum: 719eb26a77d997707905da5f4dd05fcbb3bb0813376c2a29af2dfda658b0b4c3
   extract: ./CpuTscSync.kext
   type: kext
 DiskArbitrationFixup:
@@ -126,31 +140,31 @@ DiskArbitrationFixup:
   extract: ./DiskArbitrationFixup.kext
   type: kext
 ECEnabler:
-  version: 1.0.3
-  url: https://github.com/dortania/build-repo/releases/download/ECEnabler-b7625ec/ECEnabler-1.0.3-DEBUG.zip
-  resolution: '@1Revenger1/ECEnabler@github:1.0.3#b7625ec'
-  checksum: 35148e2b9d7f1e36842654048ce20004e14ac5c8bd5bfbff376f1ca025a2bca8
+  version: 1.0.5
+  url: https://github.com/dortania/build-repo/releases/download/ECEnabler-bd81da6/ECEnabler-1.0.5-DEBUG.zip
+  resolution: '@1Revenger1/ECEnabler@github:1.0.5#bd81da6'
+  checksum: f8b02d91cdd6b78dbf4882fa1c81bc437078186806df9a71eee10054e66b2333
   extract: ./ECEnabler.kext
   type: kext
 FeatureUnlock:
-  version: 1.1.5
-  url: https://github.com/dortania/build-repo/releases/download/FeatureUnlock-94a58b5/FeatureUnlock-1.1.5-DEBUG.zip
-  resolution: '@acidanthera/FeatureUnlock@github:1.1.5#94a58b5'
-  checksum: db8e8debc1ef7270764ff06b9e630630b540fd6e9e9bcf7b64c7ba98b87d7860
+  version: 1.1.6
+  url: https://github.com/dortania/build-repo/releases/download/FeatureUnlock-118f3ec/FeatureUnlock-1.1.6-DEBUG.zip
+  resolution: '@acidanthera/FeatureUnlock@github:1.1.6#118f3ec'
+  checksum: 8952d9967ec7ede31c668d634f49a80b7b1c372444ee8ba9118fe8bf2259f88f
   extract: ./FeatureUnlock.kext
   type: kext
 HibernationFixup:
-  version: 1.4.9
-  url: https://github.com/dortania/build-repo/releases/download/HibernationFixup-84833cf/HibernationFixup-1.4.9-DEBUG.zip
-  resolution: '@acidanthera/HibernationFixup@github:1.4.9#84833cf'
-  checksum: 171b89aec324657e3c897cec8dc563a6e39527aac2848d9c5b40abf35798eb23
+  version: 1.5.1
+  url: https://github.com/dortania/build-repo/releases/download/HibernationFixup-7b8e26b/HibernationFixup-1.5.1-DEBUG.zip
+  resolution: '@acidanthera/HibernationFixup@github:1.5.1#7b8e26b'
+  checksum: 73e5e9bd19dbd87c04a089e2c359782192e4eb03dad1f00b23f4d28bf0380f28
   extract: ./HibernationFixup.kext
   type: kext
 NVMeFix:
-  version: 1.1.1
-  url: https://github.com/dortania/build-repo/releases/download/NVMeFix-b49dcb3/NVMeFix-1.1.1-DEBUG.zip
-  resolution: '@acidanthera/NVMeFix@github:1.1.1#b49dcb3'
-  checksum: d9be7a0e45f1dec70323d244c5c5b672e7709417985e9cccbe28110ab71db217
+  version: 1.1.2
+  url: https://github.com/dortania/build-repo/releases/download/NVMeFix-8680dde/NVMeFix-1.1.2-DEBUG.zip
+  resolution: '@acidanthera/NVMeFix@github:1.1.2#8680dde'
+  checksum: bd9df076260425536322670575cf5370552777659082794321f8bc10aa65bd75
   extract: ./NVMeFix.kext
   type: kext
 RealtekCardReader:
@@ -168,10 +182,10 @@ RealtekCardReaderFriend:
   extract: ./RealtekCardReaderFriend.kext
   type: kext
 RestrictEvents:
-  version: 1.1.2
-  url: https://github.com/dortania/build-repo/releases/download/RestrictEvents-5c54dcd/RestrictEvents-1.1.2-DEBUG.zip
-  resolution: '@acidanthera/RestrictEvents@github:1.1.2#5c54dcd'
-  checksum: 69c4f73a87dfa8e354a3eb1afaee99fbb8dace88391e081fe6919d88734bc367
+  version: 1.1.4
+  url: https://github.com/dortania/build-repo/releases/download/RestrictEvents-b712414/RestrictEvents-1.1.4-DEBUG.zip
+  resolution: '@acidanthera/RestrictEvents@github:1.1.4#b712414'
+  checksum: 02fe81ccf9b37b8158a906793061c78999fa5e04ba3f977df41df23be1605f56
   extract: ./RestrictEvents.kext
   type: kext
 ThunderboltReset:
@@ -208,9 +222,9 @@ VoodooI2C:
       type: kext
 VoodooPS2Controller:
   version: 2.3.6
-  url: https://github.com/dortania/build-repo/releases/download/VoodooPS2-7f4e069/VoodooPS2Controller-2.3.6-DEBUG.zip
-  resolution: '@acidanthera/VoodooPS2@github:2.3.6#7f4e069'
-  checksum: 66d0ab2708c6edf3669bfe89618d071421a01b767b7b5f2920aa32afa3773a1a
+  url: https://github.com/dortania/build-repo/releases/download/VoodooPS2-8e05d4f/VoodooPS2Controller-2.3.6-DEBUG.zip
+  resolution: '@acidanthera/VoodooPS2@github:2.3.6#8e05d4f'
+  checksum: 2ca18fda6fafa956ff07cf97f67c303fe8e41df250027c30054d505a54a0b657
   extract: ./VoodooPS2Controller.kext
   type: kext
 VoodooInjector:
