@@ -55,6 +55,38 @@
     </tr>
   </thead>
   <tbody>
+  <!-- macOS 15 -->
+    <tr>
+      <td>
+        <img
+          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/sequoia.png"
+          width=25
+          hspace=2
+          align="top"
+        />
+        Sequoia
+      </td>
+      <td style="text-align: center;">🚧</td>
+      <td>In Preview.</td>
+      <td><code>(None)</code></td>
+      <td><a href="https://www.apple.com/macos/macos-sequoia-preview/"><code>(Latest)</code></a></td>
+    </tr>
+  <!-- macOS 14 -->
+    <tr>
+      <td>
+        <img
+          src="https://raw.githubusercontent.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/main/docs/assets/README/sonoma.png"
+          width=25
+          hspace=2
+          align="top"
+        />
+        Sonoma
+      </td>
+      <td style="text-align: center;">✅</td>
+      <td>Fully Supported.</td>
+      <td><code>(None)</code></td>
+      <td><a href="https://apps.apple.com/us/app/macos-sonoma/id6450717509"><code>(Latest)</code></a></td>
+    </tr>
   <!-- macOS 13 -->
     <tr>
       <td>
