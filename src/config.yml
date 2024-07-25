@@ -275,7 +275,7 @@ DeviceProperties:
       disable-hdmi-patches:           Boolean | true
       # Framebuffer connector patches.
       # - con0 [eDP]   Primary Display
-      framebuffer-con0-alldata:       Data    | <00000800 02000000 98000000>
+      framebuffer-con0-alldata:       Data    | <00000800 02000000 98010000>
       framebuffer-con0-enable:        Data    | <01000000>
       # - con1 [DP]    Screenpad Plus
       framebuffer-con1-alldata:       Data    | <01050900 00040000 87010000>
