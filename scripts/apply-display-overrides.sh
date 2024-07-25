@@ -2,7 +2,7 @@
 # shellcheck disable=SC1091,SC2164
 
 ## @file
-# Applies display overrides for the UX481FA/UX481FL
+# Applies display overrides for the UX481FA/UX481FL, UX581GV/UX581LV, and UX582LV
 #
 # Copyright (c) 2023, Cory Bennett. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause

@@ -2,7 +2,7 @@
 # shellcheck disable=SC2086,SC2164
 
 ## @file
-# Debug logging script for the UX481FA/UX481FL
+# Debug logging script for the UX481FA/UX481FL, UX581GV/UX581LV, and UX582LV
 #
 # Copyright (c) 2023, Cory Bennett. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause
