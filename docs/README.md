@@ -14,9 +14,9 @@
 <div align="center">
 
   <a href="/LICENSE">![License](https://img.shields.io/badge/⚖_License-BSD_3_Clause-lightblue?labelColor=3f4551)</a>
-  <a href="/docs/CHANGELOG.md">![SemVer](https://img.shields.io/badge/SemVer-v0.0.0-important?logo=SemVer&labelColor=3f4551)</a>
+  <a href="/docs/CHANGELOG.md">![SemVer](https://img.shields.io/badge/SemVer-v0.1.0-important?logo=SemVer&labelColor=3f4551)</a>
   <a href="">![Supported Models](https://img.shields.io/badge/Supported%20Models-UX581GV%20%7C%20UX581LV-important?labelColor=3f4551)</a>
-  <a href="https://github.com/acidanthera/OpenCorePkg/releases">![OpenCore](https://img.shields.io/badge/dynamic/yaml?label=OpenCore&logo=Osano&logoColor=0298e1&labelColor=3f4451&prefix=v&query=OpenCorePkg.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FQonfused%2FASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh%2Fmain%2Fsrc%2Fbuild.lock)</a>
+  <a href="https://github.com/acidanthera/OpenCorePkg/releases">![OpenCore](https://img.shields.io/badge/OpenCore-1.0.0-0c7dbe?logo=Osano&logoColor=0298e1&labelColor=3f4451)</a>
   <a href="https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/actions/workflows/oce-build.yml">![OCE Build](https://github.com/Qonfused/ASUS-ZenBook-Pro-Duo-15-UX581-Hackintosh/actions/workflows/oce-build.yml/badge.svg?branch=main)</a>
 
 </div>
