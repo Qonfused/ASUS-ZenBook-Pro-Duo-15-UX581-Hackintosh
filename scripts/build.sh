@@ -28,8 +28,7 @@ if has_flag "--UX581GV"; then
   patches+=("-p patch.UX581GV.yml")
 fi
 
-echo "Arguments: '${args[@]}' '${patches[@]}'"
-
 # Run build script
+args+=("${patches[@]}")
 curl -sL https://raw.githubusercontent.com/Qonfused/OCE-Build/main/ci/bootstrap.sh \
-  | bash -s build "${args[@]} ${patches[@]}"
+  | bash -s build "${args[@]}"
