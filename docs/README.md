@@ -405,4 +405,4 @@ Refer to [CONTRIBUTING.md](/docs/CONTRIBUTING.md) for instructions (and tips) on
 - [@shiecldk](https://github.com/shiecldk) for their continued contributions and work in the original [Zenbook Pro Duo 15" (UX582) OpenCore configuration and guide](https://github.com/shiecldk/ASUS-ZenBook-Pro-Duo-15-OLED-UX582-Hackintosh) that inspired this project.
 - [@UsedDiscord](https://github.com/UsedDiscord) for their contributions and direction helping investigate screenpad and trackpad functionality.
 - [@wern-apfel](https://github.com/wern-apfel) for their contribution helping to enable ATKD WMI functionality.
--[@danperks] for their contributions in testing and debugging this project.
+- [@danperks](https://github.com/danperks) for their contributions in testing and debugging this project.
